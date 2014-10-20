@@ -1,0 +1,6 @@
+---
+# setup  swap 
+- hosts: master
+  sudo: True
+  roles: 
+    - { role: swap-enabled, when: ansible_swaptotal_mb < 9000 }
